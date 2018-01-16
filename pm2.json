@@ -1,0 +1,17 @@
+{
+  "apps": [
+    {
+      "name": "zero-zettajs-hub",
+      "script": "npm",
+      "args": "start",
+      "exec_mode": "fork",
+      "env": {
+        "NODE_ENV": "zero"
+      },
+      "env_development": {
+        "NODE_ENV": "zero",
+        "LOG_LEVEL": "debug"
+      }
+    }
+  ]
+}
