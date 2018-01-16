@@ -2,6 +2,9 @@
   "name": "zero-zettajs-hub",
   "description": "A demonstration of RasPi Zero as ZettaJS hub",
   "version": "0.1.0",
+  "scripts": {
+    "start": "node main.js"
+  },
   "repository": {
     "git": "git@github.com:yentsun/zero-zettajs-hub.git"
   },

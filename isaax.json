@@ -1,0 +1,13 @@
+{
+  "name": "zero-zettajs-hub",
+  "version": "0.1.0",
+  "description": "A demonstration of RasPi Zero as ZettaJS hub",
+  "main": "main.js",
+  "author": "Max Korinets",
+  "license": "MIT",
+  "language":"javascript",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependency": null
+}
