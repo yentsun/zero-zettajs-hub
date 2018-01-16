@@ -11,6 +11,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "flightplan": "^0.6.17",
+    "lirc_node": "0.0.4",
     "zetta": "^1.5.1"
   },
   "engines": {
