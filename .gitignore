@@ -1,2 +1,7 @@
 .idea/
 node_modules/
+npm-debug.log
+
+# Zetta.js folders
+.peers/
+.devices/
