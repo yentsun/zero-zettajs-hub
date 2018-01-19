@@ -11,9 +11,9 @@ util.inherits(TV, Device);
 TV.prototype.init = function(config) {
 
     config
-        .type('state_machine')
+        .type('tv')
         .state('off')
-        .name("TV");
+        .name('TV');
 
     config
         .when('off', {allow: ['turn-on']})
@@ -24,7 +24,7 @@ TV.prototype.init = function(config) {
 
 TV.prototype.turnOff = function(done) {
     this.state = 'off';
-    lirc.irsend.send_once("tv", "key_power", function () {
+    lirc.irsend.send_once('tv', 'key_power', function () {
         console.log("tv power command sent");
         done();
     });
@@ -32,7 +32,7 @@ TV.prototype.turnOff = function(done) {
 
 TV.prototype.turnOn = function(done) {
     this.state = 'on';
-    lirc.irsend.send_once("tv", "key_power", function () {
+    lirc.irsend.send_once('tv', 'key_power', function () {
         console.log("tv power command sent");
         done();
     });
