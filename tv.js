@@ -1,15 +1,14 @@
-const lirc = require('lirc_node');
+var lirc = require('lirc_node');
 var Device = require('zetta').Device;
 var util = require('util');
 
 
-var TV = module.exports = function() {
+var TV = module.exports = function () {
     Device.call(this);
 };
 util.inherits(TV, Device);
 
-TV.prototype.init = function(config) {
-
+TV.prototype.init = function (config) {
     config
         .type('tv')
         .state('off')
@@ -22,7 +21,7 @@ TV.prototype.init = function(config) {
         .map('turn-on', this.turnOn)
 };
 
-TV.prototype.turnOff = function(done) {
+TV.prototype.turnOff = function (done) {
     this.state = 'off';
     lirc.irsend.send_once('tv', 'key_power', function () {
         console.log("tv power command sent");
@@ -30,7 +29,7 @@ TV.prototype.turnOff = function(done) {
     });
 };
 
-TV.prototype.turnOn = function(done) {
+TV.prototype.turnOn = function (done) {
     this.state = 'on';
     lirc.irsend.send_once('tv', 'key_power', function () {
         console.log("tv power command sent");
